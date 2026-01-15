@@ -39,3 +39,15 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# Expo / React Native
+.expo/
+node_modules/
+*.log
+*.cache
+.DS_Store
+*.env
+*.env.local
+*.env.development
+*.env.production
+
