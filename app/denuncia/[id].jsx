@@ -248,7 +248,7 @@ export default function DetalhesdenunciaScreen() {
         </View>
 
         <View style={styles.section}>
-          <Text style={styles.label}>Data de Nascimento:</Text>
+          <Text style={styles.label}>Data da ocorrência:</Text>
           {isEditing ? (
             <>
               <TextInput

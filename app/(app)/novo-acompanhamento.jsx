@@ -45,18 +45,17 @@ export default function NovoAcompanhamentoScreen() {
 
             // Use Alert.alert com callback para fechar
         Alert.alert("Sucesso", "Registro de acompanhamento salvo!", [
-            {
-                text: "OK",
-                onPress: () => {
-                    // 🚨 MUDANÇA CRÍTICA AQUI 🚨
-                    // Em vez de router.back(), vamos para a Home (/)
-                    // Assim, garantimos que a Home é o único ponto de volta.
-                    setTimeout(() => {
-                    router.replace('/(app)'); 
-                    }, 150);
-                }
-            }
-        ]);
+  {
+    text: "OK",
+    onPress: () => {
+      // Volta para a tela de detalhes do atendimento principal
+      router.replace({
+        pathname: '/[id]',
+        params: { id: atendimentoId }
+      });
+    }
+  }
+]);
             
         } catch (e) {
             console.error("Erro ao adicionar acompanhamento: ", e);
